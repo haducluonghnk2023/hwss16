@@ -1,12 +1,12 @@
 "use strict";
-function merge(obj1, obj2) {
+function merge(param1, param2) {
     let obj = {};
     let subObj = {};
-    for (let key in obj1) {
-        obj = Object.assign(Object.assign({}, obj), { [key]: obj1[key] });
+    for (let key in param1) {
+        obj = Object.assign(Object.assign({}, obj), { [key]: param1[key] });
     }
-    for (const key in obj2) {
-        subObj = Object.assign(Object.assign({}, subObj), { [key]: obj2[key] });
+    for (const key in param2) {
+        subObj = Object.assign(Object.assign({}, subObj), { [key]: param2[key] });
     }
     let mergeObj = Object.assign(Object.assign({}, obj), subObj);
     return mergeObj;
@@ -17,7 +17,7 @@ let obj1 = {
         c: 2,
         d: [3, 4]
     },
-    f: "abc"
+    f: "a"
 };
 let obj2 = {
     a: 5,
@@ -29,7 +29,7 @@ let obj2 = {
         },
     },
     g: 10,
-    w: "16262",
-    f: "def"
+    w: "234",
+    f: "tge"
 };
 console.log(merge(obj1, obj2));
