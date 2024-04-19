@@ -1,14 +1,12 @@
-function checkAllFunction<T>(param:T){
-    if(typeof param === "number"){
-        return param
-    }else if(typeof param === "string"){
-        return param
-    }   
-    else{
-        return [param]
-    }
+function identity<T>(param: T): T {
+    return param;
 }
-console.log(checkAllFunction([1,2,3]));
-console.log(checkAllFunction(1));
-console.log(checkAllFunction(["a","b","c"]));
 
+const result1: number = identity(123); 
+const result2: string = identity("Hello"); 
+const result3: boolean = identity(true); 
+const result4: number[] = identity([1, 2, 3]);
+console.log(result1);
+console.log(result2);
+console.log(result3);
+console.log(result4);

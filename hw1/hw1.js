@@ -1,15 +1,12 @@
 "use strict";
-function checkAllFunction(param) {
-    if (typeof param === "number") {
-        return param;
-    }
-    else if (typeof param === "string") {
-        return param;
-    }
-    else {
-        return [param];
-    }
+function identity(param) {
+    return param;
 }
-console.log(checkAllFunction([1, 2, 3]));
-console.log(checkAllFunction(1));
-console.log(checkAllFunction(["a", "b", "c"]));
+const result1 = identity(123);
+const result2 = identity("Hello");
+const result3 = identity(true);
+const result4 = identity([1, 2, 3]);
+console.log(result1);
+console.log(result2);
+console.log(result3);
+console.log(result4);
